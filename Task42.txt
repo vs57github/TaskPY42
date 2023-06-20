@@ -1,0 +1,8 @@
+Задача42
+
+import pandas as pd
+df = pd.read_csv('/content/sample_data/california_housing_train.csv')
+min_population = df['population'].min()
+min_population_df = df[df['population'] == min_population]
+max_households = min_population_df['households'].max()
+print('Максимальное количество домохозяйств в зоне с минимальным значением населения:', max_households)
